@@ -1,0 +1,127 @@
+.about {
+  background-color: #fff8fa;
+}
+
+.resume {
+  background-color: #fff8fa;
+}
+
+.resume h1 {
+  color: red;
+}
+
+.resume-title {
+  margin-top: 30px;
+}
+
+.company {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: red;
+}
+
+.job-title {
+  font-weight: 600;
+  color: red;
+}
+
+.job-desc {
+  /*color: red;*/
+}
+
+.term {
+  font-weight: 600;
+  color: red;
+}
+
+.scroll {
+  width: 90px;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1000;
+  display: none;
+}
+
+.scroll:hover {
+  background-color: #fff8fa;
+}
+
+.scroll-link {
+}
+
+.scroll-link:hover {
+  color: red;
+}
+
+.up-arrow {
+  font-size: 1.25rem;
+  color: red;
+}
+
+.promo-img {
+  max-height: 90vh;
+  width: auto;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.title {
+  font-weight: 600;
+  /*color: #ffacc3;*/
+}
+
+html {
+  font-size: 16px;
+}
+
+hr {
+  background-color: #ffacc3;
+}
+
+.right-img {
+  margin-right: -50px;
+  float: right;
+}
+
+.left-img {
+  margin-left: -400px;
+  float: left;
+  margin-right: 3%;
+}
+
+.image-div {
+  height: 94vh;
+  width: 90%!important;
+}
+
+body {
+  line-height: 1.75;
+}
+
+a {
+  color: red;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation {
+  padding-top: 20px;
+}
+
+.arrow {
+  padding-top: 10px;
+  font-size: 24px;
+}
