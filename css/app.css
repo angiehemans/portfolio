@@ -31,6 +31,10 @@
   margin-top: 30px;
 }
 
+.bullet {
+  color: red;
+}
+
 .company {
   font-weight: 600;
   font-style: italic;
