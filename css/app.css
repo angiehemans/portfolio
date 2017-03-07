@@ -6,9 +6,26 @@
   background-color: #fff8fa;
 }
 
+.resume-column {
+  padding: 0 50px 0 50px;
+}
+
 .resume h1 {
   color: red;
+  margin-bottom: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .resume-column {
+        padding: 1rem .75rem;
+  }
+  .resume h1 {
+    margin-bottom: 0;
+  }
+}
+
+
+
 
 .resume-title {
   margin-top: 30px;
