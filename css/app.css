@@ -37,6 +37,14 @@
   color: red;
 }
 
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
 .company {
   font-weight: 600;
   font-style: italic;
