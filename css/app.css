@@ -66,6 +66,14 @@
   color: red;
 }
 
+.back-link {
+  position: fixed;
+  z-index: 1000;
+  padding-left: 20px;
+  padding-top: 10px;
+  
+}
+
 .scroll {
   width: 90px;
   position: fixed;
