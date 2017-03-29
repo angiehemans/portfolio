@@ -28,6 +28,9 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
+.plain-title {
+  margin: 30px 0 30px 0;
+}
 
 .resume-title {
   margin-top: 30px;
@@ -71,7 +74,7 @@
   z-index: 1000;
   padding-left: 20px;
   padding-top: 10px;
-  
+
 }
 
 .scroll {
@@ -105,6 +108,28 @@
   max-height: 90vh;
   width: auto;
 }
+
+.crop {
+  padding-top: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#hemans-brewing {
+  background-image: url("../images/pack_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#mdm {
+  background-image: url("../images/mdm-album.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*.crop img {
+  max-width: initial;
+}*/
 
 body,
 button,
