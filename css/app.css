@@ -1,3 +1,25 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: -.5px;
+}
+
+.title {
+  font-weight: 600;
+  /*color: #ffacc3;*/
+}
+
+html {
+  font-size: 16px;
+}
+
+hr {
+  background-color: #ffacc3;
+}
+
 .about {
   background-color: #fff8fa;
 }
@@ -109,6 +131,17 @@
   width: auto;
 }
 
+.mobile-img {
+  max-height: 90vh;
+  width: auto!important;
+}
+
+.flex-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .crop {
   padding-top: 100%;
   width: 100%;
@@ -131,26 +164,6 @@
   max-width: initial;
 }*/
 
-body,
-button,
-input,
-select,
-textarea {
-  font-family: 'Source Code Pro', monospace;
-}
-
-.title {
-  font-weight: 600;
-  /*color: #ffacc3;*/
-}
-
-html {
-  font-size: 16px;
-}
-
-hr {
-  background-color: #ffacc3;
-}
 
 .right-img {
   margin-right: -50px;
