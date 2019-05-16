@@ -4,7 +4,7 @@ input,
 select,
 textarea {
   font-family: 'Source Code Pro', monospace;
-  letter-spacing: -.5px;
+  letter-spacing: -.85px;
 }
 
 .title {
@@ -79,7 +79,7 @@ hr {
 
 .job-title {
   font-weight: 600;
-  color: red;
+  color: #666;
 }
 
 .job-desc {
@@ -87,8 +87,8 @@ hr {
 }
 
 .term {
-  font-weight: 600;
-  color: red;
+  /* font-weight: 600; */
+  color: #666;
 }
 
 .back-link {
