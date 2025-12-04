@@ -470,6 +470,11 @@ footer {
     gap: var(--spacing-sm);
   }
 
+  nav .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .hero-stats {
     gap: var(--spacing-md);
   }
