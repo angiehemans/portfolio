@@ -3,148 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hemans Brewing | Angie Hemans</title>
+  <title>Brand Design | Angie Hemans</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/tcv5kdi.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Page-specific styles */
-    .project-hero {
-      margin-top: 60px;
-      padding-top: var(--spacing-lg);
-      padding-bottom: var(--spacing-lg);
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-xs);
-      color: var(--color-text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: var(--spacing-md);
-      transition: color 0.2s ease;
-    }
-
-    .back-link:hover {
-      color: var(--color-accent);
-    }
-
-    .project-intro {
-      max-width: 700px;
-      margin-bottom: var(--spacing-lg);
-    }
-
-    .project-intro p {
-      font-size: 1.1rem;
-      color: var(--color-text-secondary);
-      line-height: 1.8;
-    }
-
-    .project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
-
-    .gallery-row {
-      display: grid;
-      gap: var(--spacing-md);
-    }
-
-    .gallery-row.single {
-      grid-template-columns: 1fr;
-    }
-
-    .gallery-row.double {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery-image {
-      width: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--color-accent-light);
-      border: 2px solid var(--color-border);
-    }
-
-    .gallery-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @media (max-width: 600px) {
-      .gallery-row.double {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
     <div class="nav-inner">
-      <a href="brand-design.html" class="logo">Angie Hemans</a>
+      <a href="index.html" class="logo">Angie Hemans</a>
       <ul class="nav-links">
-        <li><a href="brand-design.html#work">Work</a></li>
-        <li><a href="brand-design.html#about">About</a></li>
-        <li><a href="brand-design.html#contact">Contact</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="angie_hemans_resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Project Hero -->
-  <section class="project-hero">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
     <div class="container">
-      <a href="brand-design.html" class="back-link">&larr; Back to Work</a>
+      <div class="hero-content">
+        <h1>Brand & Identity<br><span>Design</span></h1>
+        <p class="subtitle">A selection of branding and identity projects rooted in my graphic design background. These personal projects showcase my love for visual storytelling, packaging, and brand systems.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Work Section -->
+  <section class="work" id="work">
+    <div class="container">
       <div class="section-header">
-        <p class="section-label">Personal Project</p>
-        <h1 class="section-title">Hemans Brewing</h1>
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Brand Projects</h2>
       </div>
 
-      <div class="project-intro">
-        <p>
-          A few years ago my brother, my dad, and I thought it would be a good
-          idea to brew our own beer. They thought it would be a good idea because
-          they would get to drink beer they had made themselves. I thought it
-          was a good idea because I would get to design labels for the brews.
-          The process has been long and always evolving. This current batch
-          of labeling is the most mature and complete. I love this project
-          because it is truly something I have done purely for my own enjoyment,
-          and I can periodically update or redesign it.
-        </p>
-      </div>
-
-      <div class="project-gallery">
-        <div class="gallery-row single">
-          <div class="gallery-image">
-            <img src="images/pack_2.jpg" alt="Hemans Brewing beer packaging">
+      <!-- Project 1: Hemans Brewing -->
+      <article class="case-study">
+        <div class="case-study-header">
+          <div>
+            <h3><a href="hemans-brewing.html">Hemans Brewing</a></h3>
+            <p class="company">Family Craft Beer Label Design</p>
+          </div>
+          <div class="case-study-meta">
+            <span class="meta-item"><span>Role:</span> Designer</span>
+            <span class="meta-item"><span>Type:</span> Personal Project</span>
           </div>
         </div>
-
-        <div class="gallery-row double">
-          <div class="gallery-image">
-            <img src="images/wheat2.jpg" alt="Wheat beer label design">
+        <a href="hemans-brewing.html" class="case-study-image"><img src="images/pack_2.jpg" alt="Hemans Brewing packaging"></a>
+        <div class="case-study-content">
+          <div>
+            <h4>The Project</h4>
+            <p>A family homebrewing venture turned into a passion project for brand and packaging design. My brother, dad, and I started brewing our own beer, and I took the opportunity to design a complete label system for our brews. The project has evolved over the years as we've refined both the beer and the branding.</p>
           </div>
-          <div class="gallery-image">
-            <img src="images/bottle1.jpg" alt="Beer bottle with custom label">
+          <div>
+            <h4>What I Did</h4>
+            <ul class="outcomes-list">
+              <li><strong>Designed complete label system</strong> for multiple beer varieties</li>
+              <li><strong>Created cohesive brand identity</strong> across all packaging</li>
+              <li><strong>Developed packaging templates</strong> for future brews</li>
+              <li><strong>Iterated on designs</strong> through multiple brewing seasons</li>
+            </ul>
           </div>
         </div>
+      </article>
 
-        <div class="gallery-row single">
-          <div class="gallery-image">
-            <img src="images/wheat.jpg" alt="Wheat beer branding">
+      <!-- Project 2: My Darling Mayday -->
+      <article class="case-study">
+        <div class="case-study-header">
+          <div>
+            <h3><a href="mdm.html">My Darling Mayday</a></h3>
+            <p class="company">Band Identity & Merchandise Design</p>
+          </div>
+          <div class="case-study-meta">
+            <span class="meta-item"><span>Role:</span> Designer</span>
+            <span class="meta-item"><span>Type:</span> Personal Project</span>
           </div>
         </div>
-      </div>
+        <a href="mdm.html" class="case-study-image"><img src="images/mdm-album.jpg" alt="My Darling Mayday album artwork"></a>
+        <div class="case-study-content">
+          <div>
+            <h4>The Project</h4>
+            <p>My Darling Mayday was a Pop-Punk band from Stockton, California. After a five-year hiatus, the group reformed for select dates and needed a fresh visual identity. I was tasked with creating designs for their unreleased album "Just Lay Still" and a full range of promotional materials.</p>
+          </div>
+          <div>
+            <h4>What I Did</h4>
+            <ul class="outcomes-list">
+              <li><strong>Designed album artwork</strong> for "Just Lay Still"</li>
+              <li><strong>Created merchandise line</strong> including shirts, stickers, and buttons</li>
+              <li><strong>Developed CD packaging</strong> and physical album materials</li>
+              <li><strong>Branded band equipment</strong> including drum kit graphics</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 

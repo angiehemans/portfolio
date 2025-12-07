@@ -1,93 +1,237 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Andrew Hemans</title>
-  <link rel="stylesheet" type="text/css" href="css/bulma.css">
-  <link rel="stylesheet" type="text/css" href="css/app.css">
-  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Source+Code+Pro:400,600" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Darling Mayday | Angie Hemans</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/tcv5kdi.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page-specific styles */
+    .project-hero {
+      margin-top: 60px;
+      padding-top: var(--spacing-lg);
+      padding-bottom: var(--spacing-lg);
+    }
 
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-md);
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+
+    .project-intro {
+      max-width: 700px;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .project-intro p {
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
+    .gallery-row {
+      display: grid;
+      gap: var(--spacing-md);
+    }
+
+    .gallery-row.single {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-row.double {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-image {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--color-accent-light);
+      border: 2px solid var(--color-border);
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-row.double {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
-  <a href="#top" class="scroll-link">
-    <div class="scroll has-text-centered is-hidden-mobile">
-      <h1 class="up-arrow">↑</h1>
-      <p>up</p>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="brand-design.html" class="logo">Angie Hemans</a>
+      <ul class="nav-links">
+        <li><a href="brand-design.html#work">Work</a></li>
+        <li><a href="brand-design.html#about">About</a></li>
+        <li><a href="brand-design.html#contact">Contact</a></li>
+        <li><a href="angie_hemans_resume.pdf" target="_blank">Resume</a></li>
+      </ul>
     </div>
-  </a>
-  <a href="index.html" class="back-link">
-    <div class="has-text-centered">
-      <p class="job-title">← Back</p>
-    </div>
-  </a>
-  <section class="hero is-fullheight">
-    <div class="hero-body is-vcentered">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-8 is-offset-2">
-            <h1 class="title is-2">My Darling Mayday</h1>
-            <p>
-              My Darling Mayday was a Pop-Punk Band from Stockton, California.
-              After five years of hiatus the group has decided to reform for a
-              few select dates. I was tasked with creating designs for their
-              unreleased album “Just Lay Still” as well as several other promotional
-               items such as: shirts, stickers, and buttons.
-            </p>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="brand-design.html" class="back-link">&larr; Back to Work</a>
+
+      <div class="section-header">
+        <p class="section-label">Personal Project</p>
+        <h1 class="section-title">My Darling Mayday</h1>
+      </div>
+
+      <div class="project-intro">
+        <p>
+          My Darling Mayday was a Pop-Punk Band from Stockton, California.
+          After five years of hiatus the group has decided to reform for a
+          few select dates. I was tasked with creating designs for their
+          unreleased album "Just Lay Still" as well as several other promotional
+          items such as: shirts, stickers, and buttons.
+        </p>
+      </div>
+
+      <div class="project-gallery">
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/mdm-album.jpg" alt="My Darling Mayday album artwork">
           </div>
         </div>
-        <br/>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/mdm-album.jpg">
-            </figure>
+
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/cd-design.jpg" alt="CD design">
           </div>
         </div>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/cd-design.jpg">
-            </figure>
+
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/pin.jpg" alt="Pin design">
           </div>
         </div>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/pin.jpg">
-            </figure>
+
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/mdm-sticker.jpg" alt="Sticker design">
           </div>
         </div>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/mdm-sticker.jpg">
-            </figure>
+
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/mdm-shirt.jpg" alt="T-shirt design">
           </div>
         </div>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/mdm-shirt.jpg">
-            </figure>
-          </div>
-        </div>
-        <div class="columns is-vcentered">
-          <div class="column is-12">
-            <figure class="image">
-              <img src="images/drumset1.jpg">
-            </figure>
+
+        <div class="gallery-row single">
+          <div class="gallery-image">
+            <img src="images/drumset1.jpg" alt="Drumset with band branding">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <script async type="text/javascript" src="js/bulma.js"></script>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image"><img src="images/angie.jpg" alt="Angie Hemans" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></div>
+        <div class="about-content">
+          <div class="section-header">
+            <p class="section-label">About</p>
+            <h2 class="section-title">I'm Angie, a design leader who still loves to make things.</h2>
+          </div>
+          <p>I've spent the last decade at the intersection of design and engineering, leading teams while staying hands-on with the work. I've scaled a design org from 1 to 8, shipped products that grew user bases by tens of thousands, and built design systems from the ground up. I often implement them in code myself.</p>
+          <p>My path to design leadership started with earning my BFA in Graphic Design from Pacific Union College, where I focused on brand identity and interactive design. That foundation has influenced my work as an interface and digital product designer over the years, shaping how I approach both visual systems and user experiences.</p>
+          <p>I learned early on that great design doesn't exist in a vacuum. It lives in the code, in the systems, and in the way teams collaborate to ship. That's why I've always stayed close to implementation. Today, I'm most energized by the challenge of building something meaningful. Whether that's a product, a team, or a system that helps both thrive, I want to be in the work, not just directing it from the sidelines.</p>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Leadership</h4>
+              <p>Team Building, Design Operations, Cross-Functional Collaboration, Executive Partnership, Hiring & Mentorship</p>
+            </div>
+            <div class="skill-category">
+              <h4>Design</h4>
+              <p>UX/UI Design, Design Systems, Brand & Identity Design, Packaging Design, User Research, Rapid Prototyping, Figma</p>
+            </div>
+            <div class="skill-category">
+              <h4>Technical</h4>
+              <p>HTML/CSS, JavaScript, React, Next.js, Ruby on Rails, WordPress, Git</p>
+            </div>
+            <div class="skill-category">
+              <h4>Currently</h4>
+              <p>Product Design at Plasmic, a visual development platform startup, leading AI-powered features</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk.</h2>
+      </div>
+      <div class="contact-content">
+        <p class="contact-text">I'm currently exploring design leadership and senior IC opportunities. If you're building something meaningful and want a design leader who can also build, I'd love to hear from you.</p>
+        <ul class="contact-links">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:angiehemans@gmail.com">angiehemans@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://linkedin.com/in/angiehemans" target="_blank">linkedin.com/in/angiehemans</a>
+          </li>
+          <li>
+            <span class="label">Github</span>
+            <a href="https://github.com/angiehemans" target="_blank">github.com/angiehemans</a>
+          </li>
+          <li>
+            <span class="label">Location</span>
+            <a href="#">Vancouver, WA</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Angie Hemans. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
