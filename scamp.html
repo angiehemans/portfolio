@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scamp | Angie Hemans</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/tcv5kdi.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page-specific styles */
+    .project-hero {
+      margin-top: 60px;
+      padding-top: var(--spacing-lg);
+      padding-bottom: var(--spacing-md);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-md);
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .project-meta .meta-item {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+
+    .project-meta .meta-item span {
+      font-weight: 600;
+      color: var(--color-text);
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .project-intro {
+      max-width: 720px;
+    }
+
+    .project-intro p {
+      font-size: 1.2rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Prose sections */
+    .case-section {
+      padding: var(--spacing-md);
+    }
+
+    .case-section .container {
+      max-width: 760px;
+    }
+
+    .case-section.wide .container {
+      max-width: var(--max-width);
+    }
+
+    .prose h2 {
+      font-family: var(--font-header);
+      font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .prose h2:first-child {
+      margin-top: 0;
+    }
+
+    .prose h3 {
+      font-family: var(--font-header);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-top: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text);
+    }
+
+    .prose p {
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .prose strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .prose ul {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .prose ul li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      background: var(--color-accent);
+      border-radius: 50%;
+    }
+
+    .prose code {
+      font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
+      font-size: 0.85em;
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .prose hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--spacing-lg) 0;
+    }
+
+    /* Code block */
+    .code-block {
+      background: #1a1a1a;
+      color: #f5f5f5;
+      border-radius: 8px;
+      padding: var(--spacing-sm) var(--spacing-md);
+      margin: var(--spacing-md) 0;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .code-block .lang-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .code-block pre {
+      margin: 0;
+      white-space: pre;
+    }
+
+    .code-block .tok-tag { color: #ff8a96; }
+    .code-block .tok-attr { color: #f5d76e; }
+    .code-block .tok-string { color: #a3e0a3; }
+    .code-block .tok-prop { color: #f5d76e; }
+    .code-block .tok-val { color: #a3e0a3; }
+    .code-block .tok-sel { color: #ff8a96; }
+
+    /* Stack table */
+    .stack-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-md) 0;
+      font-size: 0.95rem;
+    }
+
+    .stack-table th,
+    .stack-table td {
+      text-align: left;
+      padding: var(--spacing-sm);
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+
+    .stack-table th {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      background: var(--color-card-bg);
+    }
+
+    .stack-table td:first-child {
+      font-weight: 600;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+
+    .stack-table td:nth-child(2) {
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+
+    .stack-table td:last-child {
+      color: var(--color-text-secondary);
+    }
+
+    /* Image placeholders */
+    .case-image {
+      margin: var(--spacing-md) 0 var(--spacing-lg);
+    }
+
+    .case-image img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      min-height: 360px;
+      background: var(--color-accent-light);
+      border: 2px dashed var(--color-border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: center;
+      padding: var(--spacing-md);
+    }
+
+    .image-placeholder.tall {
+      min-height: 480px;
+    }
+
+    .image-placeholder.short {
+      min-height: 240px;
+    }
+
+    .image-caption {
+      margin-top: var(--spacing-xs);
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Try it section */
+    .try-it {
+      background: var(--color-card-bg);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .try-it .container {
+      max-width: 760px;
+    }
+
+    .try-it-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
+    }
+
+    .try-it-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.2rem;
+      background: var(--color-accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .try-it-links a.secondary {
+      background: transparent;
+      color: var(--color-accent);
+      border: 1px solid var(--color-accent);
+    }
+
+    .try-it-links a:hover {
+      opacity: 0.85;
+    }
+
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-top: var(--spacing-lg);
+    }
+
+    @media (max-width: 600px) {
+      .image-placeholder {
+        min-height: 220px;
+        font-size: 0.85rem;
+      }
+
+      .image-placeholder.tall {
+        min-height: 320px;
+      }
+
+      .stack-table th,
+      .stack-table td {
+        padding: 0.6rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Angie Hemans</a>
+      <ul class="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="angie_hemans_resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">&larr; Back to Work</a>
+
+      <span class="in-progress-badge">In Progress</span>
+
+      <div class="section-header" style="margin-bottom: var(--spacing-md);">
+        <p class="section-label">Design Case Study</p>
+        <h1 class="section-title">Scamp</h1>
+      </div>
+
+      <div class="project-intro">
+        <p>A local-first design tool I am building because the one I needed didn't exist. Every rectangle you draw saves as a real TSX file. Every style you set saves as a real CSS Modules file. There is no export step, no handoff, no translation layer between your design and your code.</p>
+      </div>
+
+      <div class="project-meta">
+        <div class="meta-item"><span>Status</span> In progress</div>
+        <div class="meta-item"><span>Role</span> Founder, Designer, Developer</div>
+        <div class="meta-item"><span>Type</span> Product design / Software development</div>
+        <div class="meta-item"><span>Started</span> 2026</div>
+      </div>
+
+      <div class="case-image">
+        <img src="images/scamp.png" alt="Scamp app — full view of canvas, layers, and properties panel">
+      </div>
+    </div>
+  </section>
+
+  <!-- The short version -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>The short version</h2>
+      <p>Scamp is a local-first design tool I am building because the one I needed didn't exist. Every rectangle you draw saves as a real TSX file. Every style you set saves as a real CSS Modules file. There is no export step, no handoff, no translation layer between your design and your code.</p>
+      <p>I have been using Scamp to design Scamp since week one.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-code.png" alt="Scamp canvas above the generated TSX and CSS module files">
+        <p class="image-caption">The canvas (top) and the generated <code>home.tsx</code> + <code>home.module.css</code> files (bottom) — same project, same source of truth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>The problem I kept running into</h2>
+      <p>I have spent over ten years working as both a UX designer and a developer. For most of that time I lived in the gap between the two disciplines — designing in Figma, then either rebuilding it myself in code or watching someone else rebuild it and lose something in the process.</p>
+      <p>The handoff is where weeks of careful decisions quietly disappear. Not because developers don't care. Because the tools assume designers and developers work in different files, and that assumption creates a translation problem that no amount of better tooling can fully solve.</p>
+      <p>I tried every handoff improvement that came along — Zeplin, Figma's inspect panel, design tokens, component libraries. They all made the gap more comfortable. None of them closed it.</p>
+      <p>What I actually wanted was a tool where drawing a rectangle and writing a div were the same act. I couldn't find it so I started building it.</p>
+    </div>
+  </section>
+
+  <!-- Coding agents -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>What changed with coding agents</h2>
+      <p>The problem got more urgent when I started working with coding agents. Agents like Claude Code are genuinely useful for the implementation work — they move fast, handle repetitive code, and free me up to focus on design decisions. But they need real files to work with. Not design files. Not inspect panels. Actual TSX and CSS they can read, edit, and reason about.</p>
+      <p>Using Figma alongside a coding agent means constantly translating — describing the design in words, hoping the agent interprets it correctly, checking the output against the original. That translation step is exactly the problem I was trying to eliminate.</p>
+      <p>Scamp removes it. The agent opens the project folder, reads <code>agent.md</code> for conventions, edits the component files, and the canvas updates automatically. The design and the implementation are the same conversation.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-terminal.png" alt="Built-in terminal in Scamp running a coding agent (Claude Code) alongside the canvas">
+        <p class="image-caption">The integrated terminal lets a coding agent edit the project's files directly — the canvas updates as soon as the agent saves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The core idea -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>The core idea</h2>
+      <p>The canvas and the codebase are the same thing.</p>
+      <p>Every element you draw in Scamp maps directly to a real HTML element in a real TSX file. Every style you set maps directly to a real CSS class in a real CSS Modules file. The files live in a folder on your machine, in whatever location makes sense for your workflow — inside a git repo, inside a client project folder, wherever.</p>
+      <p>When you draw a rectangle, Scamp writes:</p>
+
+      <div class="code-block">
+        <span class="lang-label">TSX</span>
+<pre>&lt;<span class="tok-tag">div</span> <span class="tok-attr">data-scamp-id</span>=<span class="tok-string">"a1b2"</span> <span class="tok-attr">className</span>={<span class="tok-string">styles.rect_a1b2</span>} /&gt;</pre>
+      </div>
+
+      <div class="code-block">
+        <span class="lang-label">CSS Modules</span>
+<pre><span class="tok-sel">.rect_a1b2</span> {
+  <span class="tok-prop">width</span>: <span class="tok-val">200px</span>;
+  <span class="tok-prop">height</span>: <span class="tok-val">120px</span>;
+  <span class="tok-prop">background</span>: <span class="tok-val">#f0f0f0</span>;
+  <span class="tok-prop">border-radius</span>: <span class="tok-val">8px</span>;
+}</pre>
+      </div>
+
+      <p>When you edit the CSS file externally — in VS Code, in a terminal, via an agent — Scamp detects the change and updates the canvas automatically. The sync is bidirectional. Neither direction is the source of truth; the file and the canvas are always in agreement.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-rectangle.png" alt="Drawing a rectangle on the Scamp canvas with size, layout, and border properties shown in the panel">
+        <p class="image-caption">Drawing a rectangle. Each shape carries a stable <code>data-scamp-id</code> that anchors the canvas element to its TSX node and CSS class.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design decisions -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>Design decisions worth talking about</h2>
+
+      <h3>Starting with a raw CSS editor instead of visual controls</h3>
+      <p>The first version of the properties panel is a CodeMirror text editor that shows the raw CSS for the selected element. No color pickers, no sliders, no dropdowns — just CSS.</p>
+      <p>This was a deliberate POC decision. I needed to validate the parse/sync loop before building a layer of UI on top of it. If I can type <code>display: flex; gap: 16px; background: #f0f0f0;</code> and see the canvas respond correctly, and then see the panel reload from the parsed file confirming the round-trip worked, the core system is sound. The visual controls are a layer on top of that foundation, not the foundation itself.</p>
+      <p>It also turned out to be genuinely useful. The raw CSS panel is something I now plan to keep permanently as a toggle alongside the WYSIWYG controls. Power users and developers will want it.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-css.png" alt="Scamp's raw CSS properties panel showing live-edited styles for the selected element">
+        <p class="image-caption">The raw CSS tab on the properties panel — every keystroke writes to the underlying CSS module file.</p>
+      </div>
+
+      <h3>Bidirectional sync as the core feature</h3>
+      <p>Most design tools sync one way — you design, you export. Scamp's bidirectional sync is the most technically interesting part of the system and the thing that makes the coding agent workflow possible.</p>
+      <p>The architecture uses <code>data-scamp-id</code> attributes on every element as stable identity anchors. When the canvas changes, a pure function called <code>generateCode</code> produces the TSX and CSS and writes them to disk with a debounce. When the files change externally, a file watcher calls a pure function called <code>parseCode</code> that reads the files and maps them back to canvas state. The diff step prevents unnecessary re-renders.</p>
+      <p>The two core functions — <code>generateCode</code> and <code>parseCode</code> — are pure functions with no side effects. They are the most critical code in the app and the most thoroughly tested.</p>
+
+      <h3>Class naming: type prefix plus short ID</h3>
+      <p>Generated CSS classes follow the pattern <code>rect_a1b2</code> — the element type as a prefix, a four character ID as a suffix. This keeps output readable without sacrificing stability. A developer opening the CSS file can tell at a glance what kind of element each class belongs to.</p>
+      <p>Users will eventually be able to rename elements, which replaces the type prefix with a meaningful name (<code>hero-card_a1b2</code>, <code>sidebar_a1b2</code>). The ID suffix stays, guaranteeing uniqueness. The rename is a two-file atomic write — both the TSX and the CSS update simultaneously, never one without the other.</p>
+
+      <h3>The agent instructions file</h3>
+      <p>Every Scamp project includes an <code>agent.md</code> file that documents the code conventions — class naming patterns, what not to modify, how the file structure works. When a user opens the terminal and runs a coding agent, the agent reads this file and knows exactly how to edit the project without breaking the canvas sync.</p>
+      <p>This is a small detail but it matters. The quality of the agent's output depends directly on how well it understands the conventions. <code>agent.md</code> is part of the product design, not an afterthought.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-agent-md.png" alt="A Scamp project's agent.md file open in VS Code, showing critical rules and CSS-first edit ordering for coding agents">
+        <p class="image-caption">A project's <code>agent.md</code> — the conventions a coding agent reads before touching any file.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- What I have learned -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>What I have learned so far</h2>
+      <p><strong>The hardest part is not the canvas.</strong> The canvas is relatively straightforward — div elements, pointer events, resize handles. The hard part is the parse/sync loop. Making <code>generateCode</code> and <code>parseCode</code> truly inverse of each other, handling every CSS shorthand correctly, making sure the round-trip never loses any information — that is where the real complexity lives.</p>
+      <p><strong>Dogfooding is unusually valuable for a tool like this.</strong> Using Scamp to design Scamp means I encounter every rough edge immediately. The feedback loop is about as tight as it can get. Every time something is awkward I fix it before moving on. The app is already better for it.</p>
+      <p><strong>The raw CSS panel reveals what visual controls to build.</strong> By watching myself use the raw editor, I can see which properties I reach for most often, which shorthands I use naturally, and where I feel friction. The WYSIWYG controls I am building now are designed around those patterns rather than guessed at up front.</p>
+      <p><strong>"Local-first" is a design philosophy, not just a technical decision.</strong> Choosing to save files to the user's folder rather than to app-managed storage changes how the whole product feels. It feels honest. The files are yours. You can open them in any editor, commit them to git, hand them to a teammate, deploy them directly. Nothing is locked away.</p>
+    </div>
+  </section>
+
+  <!-- What is next -->
+  <section class="case-section">
+    <div class="container prose">
+      <h2>What is next</h2>
+      <p>The POC is working and the WYSIWYG properties panel is nearly complete — visual controls for flex layout, sizing, colors, borders, and typography, with the raw CSS editor available as a toggle for power users.</p>
+      <p>The current development focus is on bringing the canvas to life with interactivity. Next up:</p>
+
+      <p><strong>Element states</strong> — defining hover, active, and focus styles directly from the properties panel. Selecting a state mode scopes all edits to that pseudo-class block in the CSS, and the canvas shows a live preview of the state without leaving the design tool.</p>
+
+      <p><strong>CSS animations</strong> — a preset library of named keyframe animations (fade-in, slide-in, scale-in, pulse, and more) that can be applied to any element with full control over duration, easing, delay, and iteration. The keyframe blocks are written directly into the CSS module and round-trip through the parser cleanly.</p>
+
+      <p><strong>Preview mode</strong> — a second window that runs the project as real React using a local Vite server. Interactions, transitions, hover states, and animations all work exactly as they would in a browser. The preview hot-reloads on every file change. Because it runs real React, the foundation is already in place for a future data binding feature.</p>
+
+      <p><strong>Linking between pages</strong> — connecting elements to other pages in the project so the preview window becomes a fully navigable prototype. Clicking a linked element in preview navigates to the linked page, back and forward work, and the URL bar updates.</p>
+
+      <p>After these ship, the roadmap continues with element naming and a layers panel, image support, copy/paste, undo/redo, CSS variable theming, breakpoints for responsive design, and eventually a cloud tier with shareable prototype links and comments.</p>
+
+      <div class="case-image">
+        <img src="images/scamp-theme.png" alt="Theme Tokens dialog in Scamp showing CSS variables for color primary, secondary, background, surface, text, and muted">
+        <p class="image-caption">Early work on theme tokens — CSS variables managed visually, written straight to the project's CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process artifacts -->
+  <!-- <section class="case-section">
+    <div class="container prose">
+      <h2>Process artifacts</h2>
+      <p><em>Screenshots, wireframes, and recordings to be added as the project progresses.</em></p>
+
+      <div class="case-image">
+        <div class="image-placeholder short">[ Image: Process artifact 1 — early sketch or wireframe ]</div>
+      </div>
+      <div class="case-image">
+        <div class="image-placeholder short">[ Image: Process artifact 2 — iteration screenshot ]</div>
+      </div>
+      <div class="case-image">
+        <div class="image-placeholder short">[ Image: Process artifact 3 — recording or animated GIF still ]</div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Try it -->
+  <section class="case-section try-it">
+    <div class="container prose">
+      <h2>Try it</h2>
+      <p>Scamp is open source under the Business Source License and available to download.</p>
+      <div class="try-it-links">
+        <a href="https://scampdesign.app" target="_blank">Visit scampdesign.app &rarr;</a>
+        <!-- <a href="https://github.com" target="_blank" class="secondary">View source on GitHub &rarr;</a> -->
+      </div>
+      <p class="last-updated">Last updated: April 2026</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk.</h2>
+      </div>
+      <div class="contact-content">
+        <p class="contact-text">I'm currently exploring design leadership and senior IC opportunities. If you're building something meaningful and want a design leader who can also build, I'd love to hear from you.</p>
+        <ul class="contact-links">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:angiehemans@gmail.com">angiehemans@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://linkedin.com/in/angiehemans" target="_blank">linkedin.com/in/angiehemans</a>
+          </li>
+          <li>
+            <span class="label">Github</span>
+            <a href="https://github.com/angiehemans" target="_blank">github.com/angiehemans</a>
+          </li>
+          <li>
+            <span class="label">Location</span>
+            <a href="#">Vancouver, WA</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Angie Hemans. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
