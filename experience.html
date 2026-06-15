@@ -210,7 +210,7 @@
       color: var(--color-accent);
     }
 
-    /* Image + placeholders */
+    /* Images */
     .case-image {
       margin: var(--spacing-md) 0 var(--spacing-lg);
     }
@@ -222,64 +222,12 @@
       border: 1px solid var(--color-border);
     }
 
-    .image-placeholder {
-      width: 100%;
-      min-height: 360px;
-      background: var(--color-accent-light);
-      border: 2px dashed var(--color-border);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-accent);
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-align: center;
-      padding: var(--spacing-md);
-    }
-
-    .image-placeholder.tall {
-      min-height: 480px;
-    }
-
-    .image-placeholder.short {
-      min-height: 240px;
-    }
-
     .image-caption {
       margin-top: var(--spacing-xs);
       font-size: 0.85rem;
       color: var(--color-text-secondary);
       text-align: center;
       font-style: italic;
-    }
-
-    /* Metric placeholder */
-    .metric-placeholder {
-      margin: var(--spacing-sm) 0 var(--spacing-md);
-      padding: var(--spacing-sm) var(--spacing-md);
-      background: var(--color-card-bg);
-      border: 1px dashed var(--color-border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      color: var(--color-text-secondary);
-      font-style: italic;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .metric-placeholder::before {
-      content: 'METRIC';
-      font-style: normal;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--color-accent);
-      background: var(--color-accent-light);
-      padding: 0.2rem 0.45rem;
-      border-radius: 4px;
-      flex-shrink: 0;
     }
 
     @media (max-width: 900px) {
@@ -358,19 +306,6 @@
       .case-image {
         margin: var(--spacing-sm) 0 var(--spacing-md);
       }
-
-      .image-placeholder {
-        min-height: 220px;
-        font-size: 0.85rem;
-      }
-
-      .image-placeholder.tall {
-        min-height: 320px;
-      }
-
-      .image-placeholder.short {
-        min-height: 180px;
-      }
     }
   </style>
 </head>
@@ -447,9 +382,7 @@
       </ol>
       <p>Rather than treating freemium as a threat to enterprise sales, we positioned it as the top of the enterprise funnel. That framing kept the whole company aligned and avoided the cannibalization fights that often sink projects like this.</p>
 
-      <div class="case-image">
-        <div class="image-placeholder">[ IMAGE: Diagram showing the before/after business model. Enterprise-only on the left, freemium funnel feeding both self-serve revenue and enterprise pipeline on the right. ]</div>
-      </div>
+      <!-- TODO: Add image — diagram of the before/after business model. Enterprise-only on the left, freemium funnel feeding both self-serve revenue and enterprise pipeline on the right. Wrap in <div class="case-image"><img ...></div>. -->
     </div>
   </section>
 
@@ -476,9 +409,7 @@
       </ul>
       <p>One of the trickiest ongoing strategy calls was that shared-versus-divergent component question. Sharing too much would saddle individual professionals with enterprise complexity. Diverging too much would double our maintenance burden and fragment the design system I had spent years building. We resolved it case by case through critique, guided by a simple test: does this pattern serve the user in front of it, or the org chart behind it?</p>
 
-      <div class="case-image">
-        <div class="image-placeholder">[ IMAGE: Side-by-side of an enterprise screen and its freemium counterpart, showing shared foundations with a simplified self-serve surface. ]</div>
-      </div>
+      <!-- TODO: Add image — side-by-side of an enterprise screen and its freemium counterpart, showing shared foundations with a simplified self-serve surface. Wrap in <div class="case-image"><img ...></div>. -->
     </div>
   </section>
 
@@ -496,9 +427,7 @@
       </ol>
       <p>This operating rhythm wasn't invented for this launch. It was the design ops foundation I had built over the previous years, which had already increased the org's shipping velocity 2 to 3x. The freemium project was where that system got stress-tested by running two products at once.</p>
 
-      <div class="case-image">
-        <div class="image-placeholder">[ IMAGE: Photo or artifact from a critique session, or a sample design brief with annotations. ]</div>
-      </div>
+      <!-- TODO: Add image — photo or artifact from a critique session, or a sample design brief with annotations. Wrap in <div class="case-image"><img ...></div>. -->
     </div>
   </section>
 
@@ -511,11 +440,9 @@
       <p>I redesigned the experience around a streamlined claim path that resolved the claim-versus-create ambiguity up front, and designed a separate profile merge tool to clean up duplicates when they did occur.</p>
       <p>As the leader, taking on this feature myself wasn't about not trusting my team. It was about putting the most senior judgment on the problem where a failure would be most expensive, and modeling the level of craft I expected everywhere else.</p>
 
-      <div class="case-image">
-        <div class="image-placeholder">[ IMAGE: The claim flow, before and after. Highlight the moment of claim/create disambiguation. ]</div>
-      </div>
+      <!-- TODO: Add image — the claim flow, before and after, highlighting the moment of claim/create disambiguation. Wrap in <div class="case-image"><img ...></div>. -->
 
-      <div class="metric-placeholder">Abandonment reduction and duplicate profile reduction after the claim flow redesign.</div>
+      <!-- TODO: Add metric — abandonment reduction and duplicate profile reduction after the claim flow redesign. -->
     </div>
   </section>
 
@@ -530,10 +457,7 @@
         <li><strong>A faster design-to-engineering handoff</strong> through React prototyping, a practice that outlived this project and became standard for the org</li>
       </ul>
 
-      <div class="metric-placeholder">Free-to-paid conversion rate.</div>
-      <div class="metric-placeholder">Activation rate.</div>
-      <div class="metric-placeholder">Revenue impact.</div>
-      <div class="metric-placeholder">Enterprise leads sourced from freemium users.</div>
+      <!-- TODO: Add metrics — free-to-paid conversion rate, activation rate, revenue impact, enterprise leads sourced from freemium users. -->
     </div>
   </section>
 
