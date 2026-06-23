@@ -15,199 +15,176 @@
       } catch (e) {}
     })();
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/tcv5kdi.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="logo">Angie Hemans</a>
-      <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="angie_hemans_resume.pdf" target="_blank">Resume</a></li>
-              <li>
-          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          </button>
+  <!-- Header -->
+  <header class="ed-header">
+    <div class="wrap">
+      <a href="index.html" class="ed-brand">Angie <em>Hemans</em></a>
+      <nav class="ed-nav">
+        <a href="index.html#work">Work</a>
+        <a href="#about">About</a>
+        <a href="angie_hemans_resume.pdf" target="_blank">CV</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="ed-intro">
+    <div class="wrap">
+      <span class="label reveal">Brand &amp; Identity</span>
+      <h1 class="reveal" style="--d:0.05s">
+        Branding and identity work rooted in my
+        <em>graphic design</em> background.
+      </h1>
+      <p class="ed-intro-lead reveal" style="--d:0.1s">
+        A selection of personal branding projects that showcase my love for
+        <strong>visual storytelling</strong>, packaging, and brand systems.
+      </p>
+    </div>
+  </section>
+
+  <!-- Work index -->
+  <section class="ed-work" id="work">
+    <div class="wrap">
+      <div class="ed-work-head reveal">
+        <span class="label">Selected Work</span>
+        <span class="count">Brand Projects</span>
+      </div>
+
+      <ul class="work-index">
+        <li class="reveal">
+          <a class="work-item" href="hemans-brewing.html">
+            <span class="wi-num">01</span>
+            <span class="wi-main">
+              <span class="wi-title">Hemans Brewing</span>
+              <span class="wi-cat">Family Craft Beer Label Design · Designer</span>
+            </span>
+            <span class="wi-thumb"><img src="images/pack_2.jpg" alt="Hemans Brewing packaging"></span>
+            <span class="wi-year">Personal<span class="wi-arrow">→</span></span>
+          </a>
         </li>
-</ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Brand & Identity<br><span>Design</span></h1>
-        <p class="subtitle">A selection of branding and identity projects rooted in my graphic design background. These personal projects showcase my love for visual storytelling, packaging, and brand systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Section -->
-  <section class="work" id="work">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Selected Work</p>
-        <h2 class="section-title">Brand Projects</h2>
-      </div>
-
-      <!-- Project 1: Hemans Brewing -->
-      <article class="case-study">
-        <div class="case-study-header">
-          <div>
-            <h3><a href="hemans-brewing.html">Hemans Brewing</a></h3>
-            <p class="company">Family Craft Beer Label Design</p>
-          </div>
-          <div class="case-study-meta">
-            <span class="meta-item"><span>Role:</span> Designer</span>
-            <span class="meta-item"><span>Type:</span> Personal Project</span>
-          </div>
-        </div>
-        <a href="hemans-brewing.html" class="case-study-image"><img src="images/pack_2.jpg" alt="Hemans Brewing packaging"></a>
-        <div class="case-study-content">
-          <div>
-            <h4>The Project</h4>
-            <p>A family homebrewing venture turned into a passion project for brand and packaging design. My brother, dad, and I started brewing our own beer, and I took the opportunity to design a complete label system for our brews. The project has evolved over the years as we've refined both the beer and the branding.</p>
-          </div>
-          <div>
-            <h4>What I Did</h4>
-            <ul class="outcomes-list">
-              <li><strong>Designed complete label system</strong> for multiple beer varieties</li>
-              <li><strong>Created cohesive brand identity</strong> across all packaging</li>
-              <li><strong>Developed packaging templates</strong> for future brews</li>
-              <li><strong>Iterated on designs</strong> through multiple brewing seasons</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2: My Darling Mayday -->
-      <article class="case-study">
-        <div class="case-study-header">
-          <div>
-            <h3><a href="mdm.html">My Darling Mayday</a></h3>
-            <p class="company">Band Identity & Merchandise Design</p>
-          </div>
-          <div class="case-study-meta">
-            <span class="meta-item"><span>Role:</span> Designer</span>
-            <span class="meta-item"><span>Type:</span> Personal Project</span>
-          </div>
-        </div>
-        <a href="mdm.html" class="case-study-image"><img src="images/mdm-album.jpg" alt="My Darling Mayday album artwork"></a>
-        <div class="case-study-content">
-          <div>
-            <h4>The Project</h4>
-            <p>My Darling Mayday was a Pop-Punk band from Stockton, California. After a five-year hiatus, the group reformed for select dates and needed a fresh visual identity. I was tasked with creating designs for their unreleased album "Just Lay Still" and a full range of promotional materials.</p>
-          </div>
-          <div>
-            <h4>What I Did</h4>
-            <ul class="outcomes-list">
-              <li><strong>Designed album artwork</strong> for "Just Lay Still"</li>
-              <li><strong>Created merchandise line</strong> including shirts, stickers, and buttons</li>
-              <li><strong>Developed CD packaging</strong> and physical album materials</li>
-              <li><strong>Branded band equipment</strong> including drum kit graphics</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
+        <li class="reveal">
+          <a class="work-item" href="mdm.html">
+            <span class="wi-num">02</span>
+            <span class="wi-main">
+              <span class="wi-title">My Darling Mayday</span>
+              <span class="wi-cat">Band Identity &amp; Merchandise Design · Designer</span>
+            </span>
+            <span class="wi-thumb"><img src="images/mdm-album.jpg" alt="My Darling Mayday album artwork"></span>
+            <span class="wi-year">Personal<span class="wi-arrow">→</span></span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image"><img src="images/angie.jpg" alt="Angie Hemans" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></div>
-        <div class="about-content">
-          <div class="section-header">
-            <p class="section-label">About</p>
-            <h2 class="section-title">I'm Angie, a design leader who still loves to make things.</h2>
-          </div>
-          <p>I've spent the last decade at the intersection of design and engineering, leading teams while staying hands-on with the work. I've scaled a design org from 1 to 8, shipped products that grew user bases by tens of thousands, and built design systems from the ground up. I often implement them in code myself.</p>
-          <p>My path to design leadership started with earning my BFA in Graphic Design from Pacific Union College, where I focused on brand identity and interactive design. That foundation has influenced my work as an interface and digital product designer over the years, shaping how I approach both visual systems and user experiences.</p>
-          <p>I learned early on that great design doesn't exist in a vacuum. It lives in the code, in the systems, and in the way teams collaborate to ship. That's why I've always stayed close to implementation. Today, I'm most energized by the challenge of building something meaningful. Whether that's a product, a team, or a system that helps both thrive, I want to be in the work, not just directing it from the sidelines.</p>
+  <!-- About -->
+  <section class="ed-about" id="about">
+    <div class="wrap">
+      <div class="ed-about-grid">
+        <div class="reveal">
+          <span class="label">About</span>
+          <h2>A design leader who still loves to <em>make things.</em></h2>
+          <img class="ed-about-photo" src="images/angie.jpg" alt="Angie Hemans">
+        </div>
+        <div class="ed-about-body reveal" style="--d:0.08s">
+          <p>I've spent the last decade at the intersection of design and engineering, leading teams
+            while staying hands-on with the work. I've scaled a design org from 1 to 8, shipped
+            products that grew user bases by tens of thousands, and built design systems from the
+            ground up, often implementing them in code myself.</p>
+          <p>My path to design leadership started with earning my BFA in Graphic Design from Pacific
+            Union College, where I focused on brand identity and interactive design. That foundation
+            has shaped how I approach both visual systems and user experiences.</p>
+          <p>Today I'm most energized by building something meaningful: a product, a team, or a
+            system that helps both thrive. I want to be in the work, not just directing it from the
+            sidelines.</p>
 
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Leadership</h4>
-              <p>Team Building, Design Operations, Cross-Functional Collaboration, Executive Partnership, Hiring & Mentorship</p>
-            </div>
-            <div class="skill-category">
-              <h4>Design</h4>
-              <p>UX/UI Design, Design Systems, Brand & Identity Design, Packaging Design, User Research, Rapid Prototyping, Figma</p>
-            </div>
-            <div class="skill-category">
-              <h4>Technical</h4>
-              <p>HTML/CSS, JavaScript, React, Next.js, Ruby on Rails, WordPress, Git</p>
-            </div>
-            <div class="skill-category">
-              <h4>Currently</h4>
-              <p>Product Design at Plasmic, a visual development platform startup, leading AI-powered features</p>
-            </div>
-          </div>
+          <dl class="ed-skills">
+            <div class="ed-skills-row"><dt>Leadership</dt><dd>Team building, design operations, executive partnership, hiring &amp; mentorship</dd></div>
+            <div class="ed-skills-row"><dt>Design</dt><dd>Brand &amp; identity, packaging, design systems, UX/UI, rapid prototyping, Figma</dd></div>
+            <div class="ed-skills-row"><dt>Technical</dt><dd>HTML/CSS, JavaScript, React, Next.js, Ruby on Rails, Git</dd></div>
+          </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Contact</p>
-        <h2 class="section-title">Let's talk.</h2>
-      </div>
-      <div class="contact-content">
-        <p class="contact-text">I'm currently exploring design leadership and senior IC opportunities. If you're building something meaningful and want a design leader who can also build, I'd love to hear from you.</p>
-        <ul class="contact-links">
-          <li>
-            <span class="label">Email</span>
-            <a href="mailto:angiehemans@gmail.com">angiehemans@gmail.com</a>
-          </li>
-          <li>
-            <span class="label">LinkedIn</span>
-            <a href="https://linkedin.com/in/angiehemans" target="_blank">linkedin.com/in/angiehemans</a>
-          </li>
-          <li>
-            <span class="label">Github</span>
-            <a href="https://github.com/angiehemans" target="_blank">github.com/angiehemans</a>
-          </li>
-          <li>
-            <span class="label">Location</span>
-            <a href="#">Vancouver, WA</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Contact -->
+  <section class="ed-contact" id="contact">
+    <div class="wrap">
+      <span class="label reveal">Contact</span>
+      <h2 class="reveal" style="--d:0.05s">Let's build something<br><span class="rotator"><span class="rotator-word" id="rotatorWord">fun.</span><span class="rotator-period"></span></span></h2>
+      <ul class="ed-contact-links reveal" style="--d:0.1s">
+        <li><span class="k">Email</span><a href="mailto:angiehemans@gmail.com">angiehemans@gmail.com</a></li>
+        <li><span class="k">LinkedIn</span><a href="https://linkedin.com/in/angiehemans" target="_blank">in/angiehemans</a></li>
+        <li><span class="k">GitHub</span><a href="https://github.com/angiehemans" target="_blank">@angiehemans</a></li>
+        <li><span class="k">Location</span>Vancouver, WA</li>
+      </ul>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Angie Hemans. All rights reserved.</p>
+  <footer class="ed-footer">
+    <div class="wrap">
+      <span>© 2026 Angie Hemans</span>
+    </div>
   </footer>
+
   <script>
-    (function () {
-      var toggle = document.getElementById('themeToggle');
-      if (!toggle) return;
-      var root = document.documentElement;
-      function setPressed(){ toggle.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark'); }
+    // Reveal on scroll
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(el => io.observe(el));
+    }
+
+    // Dark mode toggle
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const setPressed = () => toggle.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark');
+    setPressed();
+    toggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
       setPressed();
-      toggle.addEventListener('click', function () {
-        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) {}
-        setPressed();
-      });
+    });
+
+    // Rotating word in the contact heading.
+    const ROTATING_WORDS = ['fun.', 'together.'];
+    (function () {
+      const word = document.getElementById('rotatorWord');
+      if (!word || ROTATING_WORDS.length < 2) return;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let i = 0;
+      setInterval(() => {
+        const next = ROTATING_WORDS[(i + 1) % ROTATING_WORDS.length];
+        i = (i + 1) % ROTATING_WORDS.length;
+        if (reduceMotion) { word.textContent = next; return; }
+        word.classList.add('is-out');
+        setTimeout(() => {
+          word.textContent = next;
+          word.classList.add('is-prep');
+          word.classList.remove('is-out');
+          void word.offsetWidth; // flush styles so the enter transition runs
+          word.classList.remove('is-prep');
+        }, 380);
+      }, 2600);
     })();
   </script>
 
